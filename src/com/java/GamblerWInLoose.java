@@ -6,11 +6,11 @@ public class GamblerWInLoose
     {
         if( Math.random() > 0.5)
             {
-                System.out.println("Gambler is Win");
+                System.out.println("Player is Win");
             }
              else
             {
-                System.out.println("Gambler is Loose");
+                System.out.println("Player is Loose");
             }
 
     }
