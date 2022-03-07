@@ -1,15 +1,10 @@
 package com.java;
 
-import java.util.Scanner;
-
 public class GamblerWInLoose
 {
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter value : ");
-        int bet = scanner.nextInt();
-          if( bet > 0)
+    public static void main(String[] args)
+    {
+        if( Math.random() > 0.5)
             {
                 System.out.println("Gambler is Win");
             }
