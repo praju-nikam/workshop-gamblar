@@ -71,7 +71,7 @@ public class Gambler
                 loseCount++;
             }
         }
-        totalWinAmount = winLimit * winCount;
+        totalWinAmount  = winLimit * winCount;
         totalLoseAmount = loseLimit * loseCount;
         System.out.println(" Win Count in 20 days        : " +winCount);
         System.out.println(" Lose Count in count 20 days : " +loseCount);
@@ -136,13 +136,13 @@ public class Gambler
             {
                 winCount++;
                 luckyDay = day ;
-                System.out.println("Luckyiest Day            : " +luckyDay);
+                System.out.println("Luckiest Day            : " +luckyDay);
             }
             else if(count == loseLimit)
             {
                 loseCount++ ;
                 unLuckyDay = day  ;
-                System.out.println("Unluckyiest Day         : " +unLuckyDay);
+                System.out.println("Unluckiest Day         : " +unLuckyDay);
             }
         }
 
@@ -150,6 +150,28 @@ public class Gambler
         System.out.println("In Month Unluckiest Days : " +loseCount);
     }
 
+    /*
+           use case 7 if won would like to continue playing next month or stop Gambling
+    */
+
+    public void playingOrStop()
+    {
+        int      winCount = 0;
+        int     loseCount = 0;
+        int count = playGame();
+        if ( count < 150)
+        {
+            winCount++;
+            System.out.println("Playing Next Month");
+        }
+
+        else if( count > 50 )
+        {
+            loseCount++;
+            System.out.println("Playing Stop");
+        }
+
+    }
     public static void main(String[] args)
     {
         System.out.println("-*-*-*-*-*-*- Welcome to Gambler -*-*-*-*-*-*-");
@@ -159,7 +181,7 @@ public class Gambler
         gambler.calTotalAmount();
         gambler.calculateMonthly();
         gambler.checkLuckyOrUnluckyDay();
-
+        gambler.playingOrStop();
 
     }
 }
