@@ -152,12 +152,12 @@ public class Gambler
 
     public static void main(String[] args)
     {
-        System.out.println("-------Welcome to Gambler------");
+        System.out.println("-*-*-*-*-*-*- Welcome to Gambler -*-*-*-*-*-*-");
         Gambler gambler = new Gambler();
-//        gambler.winOrLose();
-//        gambler.playGame();
-//        gambler.calTotalAmount();
-//        gambler.calculateMonthly();
+        gambler.winOrLose();
+        gambler.playGame();
+        gambler.calTotalAmount();
+        gambler.calculateMonthly();
         gambler.checkLuckyOrUnluckyDay();
 
 
